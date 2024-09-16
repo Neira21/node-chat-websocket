@@ -1,6 +1,6 @@
 # Para Ejecutar el proyecto
 
-- En la raíz del proyecto ejecutar el siguiente comando:
+- En la raíz del proyecto ejecutar los siguientes comandos:
 
 ```bash
 npm install
@@ -8,7 +8,7 @@ npm run dev
 ```
 
 # Para el front end
-- Entrar en la carpeta vite-client y ejecutar el siguiente comando:
+- Entrar en la carpeta client y ejecutar los siguientes comandos:
 
 ```bash
 npm install
@@ -22,3 +22,9 @@ npm run dev
 
 
 
+
+# Por realizar
+- Base de datos
+- Autenticación
+- Validaciones
+- Envío de archivos

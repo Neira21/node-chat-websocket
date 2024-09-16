@@ -3,7 +3,6 @@ import logger from 'morgan'
 import cors from 'cors'
 import { Server as SocketServer } from 'socket.io'
 import { createServer } from 'node:http'
-
 import { PORT } from './config.js'
 
 const port = PORT ?? 3000
@@ -17,7 +16,7 @@ const io = new SocketServer(server, {
   }
 })
 
-app.use(express.static('client'))
+//app.use(express.static('client'))
 app.use(cors())
 app.use(logger('dev'))
 
@@ -28,15 +27,18 @@ io.on('connection', (socket) =>{
       from: socket.id
     })
   })
-
   
   socket.on('disconnect', ()=>{
     console.log('an user has disconnected')
   })
 })
 
+// app.get('/', (req, res) => {
+//   res.sendFile(process.cwd() + '/client/index.html')
+// })
+
 app.get('/', (req, res) => {
-  res.sendFile(process.cwd() + '/client/index.html')
+  res.send('Aplicación de Chat')
 })
 
 server.listen(port, ()=>{

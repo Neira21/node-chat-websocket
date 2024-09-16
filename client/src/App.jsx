@@ -6,20 +6,7 @@ const socket = io('http://localhost:4000')
 
 function App() {
   const [message, setMessage] = useState('')
-  const [messages, setMessages] = useState([
-    {
-      body: "Hello",
-      from: "Server"
-    },
-    {
-      body: "How are you?",
-      from: "Server"
-    },
-    {
-      body: "I'm fine",
-      from: "Me"
-    },
-  ])
+  const [messages, setMessages] = useState([])
 
   const messagesEndRef = useRef(null)
   
